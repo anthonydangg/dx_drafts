@@ -1,0 +1,4 @@
+# This file is used internally by FFMPEG.
+file 'file:/Users/anthonydang/Documents/projects/data_explained/linear_regression/media/videos/scene/1920p60/partial_movie_files/Graph/2299507991_4028604535_223132457.mp4'
+file 'file:/Users/anthonydang/Documents/projects/data_explained/linear_regression/media/videos/scene/1920p60/partial_movie_files/Graph/3726228658_3891874688_3967832467.mp4'
+file 'file:/Users/anthonydang/Documents/projects/data_explained/linear_regression/media/videos/scene/1920p60/partial_movie_files/Graph/3726228658_1954882305_498764604.mp4'

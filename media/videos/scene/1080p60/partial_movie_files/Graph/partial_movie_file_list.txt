@@ -1,0 +1,8 @@
+# This file is used internally by FFMPEG.
+file 'file:/Users/anthonydang/Documents/projects/data_explained/linear_regression_experiment/media/videos/scene/1080p60/partial_movie_files/Graph/3977891868_876414619_223132457.mp4'
+file 'file:/Users/anthonydang/Documents/projects/data_explained/linear_regression_experiment/media/videos/scene/1080p60/partial_movie_files/Graph/2852726489_1995766097_2565336155.mp4'
+file 'file:/Users/anthonydang/Documents/projects/data_explained/linear_regression_experiment/media/videos/scene/1080p60/partial_movie_files/Graph/2852726489_1261914460_4051030799.mp4'
+file 'file:/Users/anthonydang/Documents/projects/data_explained/linear_regression_experiment/media/videos/scene/1080p60/partial_movie_files/Graph/2852726489_2653242180_270170634.mp4'
+file 'file:/Users/anthonydang/Documents/projects/data_explained/linear_regression_experiment/media/videos/scene/1080p60/partial_movie_files/Graph/2852726489_2662283898_1098845069.mp4'
+file 'file:/Users/anthonydang/Documents/projects/data_explained/linear_regression_experiment/media/videos/scene/1080p60/partial_movie_files/Graph/2852726489_4265750379_1770763086.mp4'
+file 'file:/Users/anthonydang/Documents/projects/data_explained/linear_regression_experiment/media/videos/scene/1080p60/partial_movie_files/Graph/2852726489_3891874688_2431766027.mp4'
