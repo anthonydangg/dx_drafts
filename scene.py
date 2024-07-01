@@ -70,10 +70,51 @@ class Graph(Scene):
 
         #create sliding box from x and y axis to show price and sqfoot
 
-        #test: get ValueTracker moving along linear reg
-        # -> axes.get_lines_to_point transform w/ ValueTracker
+        # we can do two decimal numbers to get (x,y)
 
-        track = axes.get_lines_to_point(axes.coords_to_point(100,300000), color=GREEN)
-        self.play(Create(track))
-        self.wait(3)
+        decimal_x = DecimalNumber(
+            0,
+            num_decimal_places=2,
+            unit= r" ,"
+        )
+
+        decimal_y = DecimalNumber(
+            0,
+            num_decimal_places=2,
+            unit=None
+        )
+
+        left_paren = Tex("(")
+        right_paren = Tex(")")
+
+        def update_decimal_x(d):
+            d.next_to(track, UP)
+            x_value = axes.p2c(track.get_edge_center(RIGHT))[0]
+            d.set_value(x_value)
+
+        def update_decimal_y(d):
+            d.next_to(decimal_x, RIGHT * 0.1)
+            y_value = axes.p2c(track.get_edge_center(UP))[1]
+            d.set_value(y_value)
+
+        decimal_x.add_updater(update_decimal_x)
+        left_paren.add_updater(lambda x : x.next_to(decimal_x, LEFT))
+        self.add(decimal_x, left_paren)
+        decimal_y.add_updater(update_decimal_y)
+        right_paren.add_updater(lambda x : x.next_to(decimal_y, RIGHT))
+        self.add(decimal_y, right_paren)
+
+        track = axes.get_lines_to_point(axes.coords_to_point(100,79385.1693785), color=GREEN)
+        track_2 = axes.get_lines_to_point(axes.coords_to_point(700,482980.7948761454), color = GREEN)
+        track_3 = axes.get_lines_to_point(axes.coords_to_point(350,246204.6945839854), color = GREEN)
+        self.play(Create(track)) 
+        # self.wait(2)
+        self.play(ReplacementTransform(track,track_2, run_time = 3))
+        self.add(decimal_x)
+        self.wait(1)
+        self.remove(track_2)
+        self.play(ReplacementTransform(track,track_3, run_time = 3))
+        self.add(decimal_x)
+        self.wait(2)
+        
 
