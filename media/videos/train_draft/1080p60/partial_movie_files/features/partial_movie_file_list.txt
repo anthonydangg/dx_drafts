@@ -1,8 +1,0 @@
-# This file is used internally by FFMPEG.
-file 'file:/Users/anthonydang/Documents/projects/data_explained/experiment/media/videos/train_draft/1080p60/partial_movie_files/features/1939688456_1766419879_1263113766.mp4'
-file 'file:/Users/anthonydang/Documents/projects/data_explained/experiment/media/videos/train_draft/1080p60/partial_movie_files/features/3488095966_1406419677_3039163659.mp4'
-file 'file:/Users/anthonydang/Documents/projects/data_explained/experiment/media/videos/train_draft/1080p60/partial_movie_files/features/3488095966_2919340033_2078789420.mp4'
-file 'file:/Users/anthonydang/Documents/projects/data_explained/experiment/media/videos/train_draft/1080p60/partial_movie_files/features/3488095966_583670102_2176690993.mp4'
-file 'file:/Users/anthonydang/Documents/projects/data_explained/experiment/media/videos/train_draft/1080p60/partial_movie_files/features/3488095966_4277048409_1393045348.mp4'
-file 'file:/Users/anthonydang/Documents/projects/data_explained/experiment/media/videos/train_draft/1080p60/partial_movie_files/features/3488095966_381003771_2546655136.mp4'
-file 'file:/Users/anthonydang/Documents/projects/data_explained/experiment/media/videos/train_draft/1080p60/partial_movie_files/features/3488095966_2919340033_3834292322.mp4'
