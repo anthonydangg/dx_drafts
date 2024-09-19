@@ -1,1 +1,1 @@
-Linear Regression animation prototype from Data Explained
+Drafts for the video series "Data Explained". 
