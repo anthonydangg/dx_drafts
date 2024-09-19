@@ -1,2 +1,0 @@
-# This file is used internally by FFMPEG.
-file 'file:/Users/anthonydang/Documents/projects/data_explained/experiment/media/videos/train_draft/1920p60/partial_movie_files/style/1223368873_4068412880_223132457.mp4'
