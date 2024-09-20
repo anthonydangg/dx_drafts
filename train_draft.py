@@ -5,10 +5,9 @@ from manim import *
 # config.pixel_width = 1080   # Width for portrait
 # config.frame_height = 9  # Manim units (scales content to fit the height)
 # config.frame_width = 16    # Manim units (scales content to fit the width)
-
+config.background_color = hex_to_rgb("#312b54")
 class intro(Scene):
     def construct(self):
-        self.camera.background_color = hex_to_rgb("#312b54")
         grad = SVGMobject("assets/graduate.svg")
         grad.set_color(WHITE)
         self.play(SpiralIn(grad), run_time=3)
@@ -44,7 +43,6 @@ class features(Scene):
         return number_line, pointer, decimal, tracker
     
     def construct(self):
-        self.camera.background_color = hex_to_rgb("#312b54")
 
         lx, pointer_x, hours, tracker_x = self.number_line([0, 70, 5], 10, UP, DOWN, 0)
         hours.set_num_decimal_places(0)
@@ -64,10 +62,26 @@ class features(Scene):
         self.play(tracker_y.animate.set_value(4.5), run_time = 2)
         self.wait(1)
 
-# class decision_boundary(Scene):
-#     def construct(self):
+class decision_boundary(Scene):
+    def construct(self):
+        db = Line(start=[-5,-3,0], end=[5,3,0])
+        self.add(db)
+        self.play(Create(db))
+        # self.wait(1)
+
+        grad = SVGMobject("assets/graduate.svg")
+        # self.play(SpiralIn(grad), run_time=3)
+        # grad.set_color(WHITE)
+        s= VGroup(*[SVGMobject("assets/graduate.svg").shift(i*0.1*RIGHT*np.random.uniform(-1,1)+UP*np.random.uniform(-1,1)) for i in range(0,15)])
+        self.add(s)
+        self.wait(1)
+        #try arrangesumobbjectsexample from Mobject doc
+        # for n in range(5):
+
+
+
 
     
 
-#for loop to fill screen with svgs?
+#for loop to fill screen with svgs?/ can use uniform grid
 #then shrink and disperse into train, test, valid
