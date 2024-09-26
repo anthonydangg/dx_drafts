@@ -64,19 +64,61 @@ class features(Scene):
 
 class decision_boundary(Scene):
     def construct(self):
+        plane = NumberPlane()
         db = Line(start=[-5,-3,0], end=[5,3,0])
         self.add(db)
+        # self.add(plane)
         self.play(Create(db))
         # self.wait(1)
 
         grad = SVGMobject("assets/graduate.svg")
-        # self.play(SpiralIn(grad), run_time=3)
-        # grad.set_color(WHITE)
-        s= VGroup(*[SVGMobject("assets/graduate.svg").shift(i*0.1*RIGHT*np.random.uniform(-1,1)+UP*np.random.uniform(-1,1)) for i in range(0,15)])
-        self.add(s)
+        grad.shift(3*UP + 2*RIGHT)
+        grad2 = SVGMobject("assets/graduate.svg")
+        grad2.shift(2*UP + 2*LEFT)
+        grad3 = SVGMobject("assets/graduate.svg")
+        grad3.shift(1*DOWN + 5*LEFT)
+        grads = VGroup(grad,grad2,grad3)
+        grads.set_color(WHITE) 
+        self.play(FadeIn(grads))
+        gamer = SVGMobject("assets/gamer.svg")
+        gamer.shift(2*DOWN)
+        gamer2 = SVGMobject("assets/gamer.svg")
+        gamer2.shift(2*DOWN + 5*RIGHT)
+        gamer3 = SVGMobject("assets/gamer.svg")
+        gamer3.shift(3*DOWN + 2*RIGHT)
+        gamers = VGroup(gamer,gamer2,gamer3)
+        gamers.set_color(WHITE) 
+        self.play(FadeIn(gamers))
         self.wait(1)
-        #try arrangesumobbjectsexample from Mobject doc
-        # for n in range(5):
+        
+
+class zoom(MovingCameraScene):
+    def construct(self):
+        #arrange in gird
+
+        grads = VGroup(*[
+            SVGMobject("assets/graduate.svg")
+            for i in range(24)
+            ])
+        grads.set_color(WHITE)
+        grads.arrange_in_grid(
+            buff=(0.25,0.5),
+            col_alignments="lccccr",
+            row_alignments="uccd", #don't understand row/col alignment
+            col_widths=[1, *[None]*4, 1],
+            row_heights=[1, None, None, 1],
+            flow_order="rd"
+        )
+        for grad in grads:
+            self.play(FadeIn(grad, scale=0.5), run_time=0.2)
+
+        self.wait(1)
+
+        self.play(grads.animate.scale(0.5))
+        self.play(grads.animate.to_corner(DR))
+        #just do half grads half gamers then split to left/right
+
+
 
 
 
